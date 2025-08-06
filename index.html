@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Erd Animates – Custom animations and video editing. Free estimates and consulting.">
+  <meta property="og:title" content="Erd Animates – Custom Animation">
+  <meta property="og:description" content="Animations of all types. Free estimates and consulting.">
+  <meta property="og:image" content="https://erdanimates.shop/preview.png">
+  <meta property="og:url" content="https://erdanimates.shop">
+  <title>Erd Animates | Portfolio</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://erdanimates.shop/favicon.png">
+  <link rel="shortcut icon" href="https://erdanimates.shop/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://erdanimates.shop/favicon.png">
+  <meta name="theme-color" content="#87CEEB">
+
+  <style>
+    :root {
+      --bg-light: #fff;
+      --text-light: #000;
+      --bg-dark: #111;
+      --text-dark: #fff;
+      --accent: #ff3366;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(17, 17, 17, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 10px 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    nav a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 25px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #666;
+      transition: .4s;
+      border-radius: 25px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 19px;
+      width: 19px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: var(--accent);
+    }
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+    }
+    .light-mode {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+    .light-mode footer {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <header>
+    <div class="theme-toggle">
+      <label class="switch" aria-label="Toggle light/dark theme">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <h1>Erd Animates</h1>
+    <p>Video & Picture Animator | Bringing Stories to Life</p>
+    <p>I Can Make Animations of All Types! Free Estimates and Consulting!</p>
+  </header>
+
+  <section id="portfolio">
+  <h2>My Work</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+    <video src="Newton.mp4" controls></video>
+    <video src="DadWash.mp4" controls></video>
+    <video src="Dadbaby.mp4" controls></video>
+    <video src="ZacLincGood.mp4" controls></video>
+    <video src="dadbaby2.mp4" controls></video>
+    <img src="good.png" alt="Animation Still 1">
+    <img src="good2.png" alt="Animation Still 2">
+    <img src="paperhand.png" alt="Animation Still 3">
+  </div>
+</section>
+
+  <section id="contact">
+  <h2>Get in Touch</h2>
+  <p style="text-align:center">Email me directly:
+    <a href="mailto:info@erdanimates.shop?subject=Yes!%20I%20would%20like%20to%20hire%20you!" style="color:var(--accent)">
+      info@erdanimates.shop
+    </a>
+  </p>
+  <form id="contact-form" action="https://formspree.io/f/mwpqojky" method="POST" style="max-width:500px;margin:30px auto;display:flex;flex-direction:column;gap:10px;">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <input type="text" name="website" class="hidden-field" tabindex="-1" autocomplete="off">
+    <button type="submit" style="background:var(--accent);color:#fff;padding:12px;border:none;border-radius:5px;cursor:pointer;font-size:1rem;">Send Message</button>
+  </form>
+  <div id="thank-you" class="thank-you" style="display:none;text-align:center;padding:20px;background:rgba(0,0,0,0.2);border-radius:10px;">
+    <h3>✅ Thank you for reaching out!</h3>
+    <p>I’ll get back to you as soon as possible.</p>
+  </div>
+</section>
+
+<script>
+    const toggleSwitch = document.getElementById('theme-toggle');
+    toggleSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('light-mode', toggleSwitch.checked);
+    });
+  </script>
+
+  <!-- Live Chat Widget (Tawk.to) -->
+  <script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function() {
+      var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+      s1.async = true;
+      s1.src = 'https://embed.tawk.to/6893ac02efd97c1925ed393f/1j20dfqin';
